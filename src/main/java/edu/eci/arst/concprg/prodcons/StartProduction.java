@@ -16,15 +16,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class StartProduction {
-    
-    
+
     public static void main(String[] args) {
-        
-        Queue<Integer> queue=new LinkedBlockingQueue<>();
-        
-        
+
+        Queue<Integer> queue = new LinkedBlockingQueue<>();
+
         new Producer(queue,Long.MAX_VALUE).start();
-        
+        //new Producer(queue, 5).start();
+
         //let the producer create products for 5 seconds (stock).
         try {
             Thread.sleep(100);
@@ -32,9 +31,7 @@ public class StartProduction {
             Logger.getLogger(StartProduction.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-
         new Consumer(queue).start();
     }
-    
 
 }

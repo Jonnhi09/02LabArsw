@@ -1,3 +1,4 @@
+Parte I
 1.	Revise el funcionamiento del programa y ejecútelo.
 	Mientras esto ocurren, ejecute jVisualVM y revise el consumo de CPU del proceso correspondiente.
 	A qué se debe este consumo?, cual es la clase responsable?
@@ -14,3 +15,16 @@
 	R/ Al reducir el tiempo de espera del Hilo principal de 5000 ms a 500 ms y,
 	   reducir el del Producer de 1000 ms a 100 ms. Se ve una notable disminución 
 	   en el uso del procesador.
+	   
+Parte II
+2.	Revise el código e identifique cómo se implemento la funcionalidad antes indicada. 
+	Dada la intención del juego, un invariante debería ser que la sumatoria de los puntos 
+	de vida de todos los jugadores siempre sea el mismo(claro está, en un instante de tiempo 
+	en el que no esté en proceso una operación de incremento/reducción de tiempo). 
+	Para este caso, para N jugadores, cual debería ser este valor?.
+	
+	R/ El valor de la vida de cada inmortal multiplicado por el número total de inmortales.
+	
+3.	Ejecute la aplicación y verifique cómo funcionan las opción ‘pause and check’. Se cumple el invariante?.
+
+	R/ No se cumple el invariante.
